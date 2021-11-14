@@ -1,7 +1,8 @@
-import 'package:teste/screens/movies_list.dart';
 import 'package:flutter/material.dart';
+import 'constants.dart';
+import 'controller/movie_api.dart';
 
-void main() {
+void main() async{
   runApp(const MyApp());
 }
 
@@ -14,8 +15,12 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: "Movies App",
-      theme: ThemeData(primarySwatch: Colors.deepPurple),
-      home: const MovieList(),
+      theme: ThemeData(
+          primarySwatch: Constants.primaryColor,
+          scaffoldBackgroundColor: Constants.backgroundColor,
+          fontFamily: Constants.defaultFont,
+      ),
+      home: const GetMovieList(),
     );
   }
 }

@@ -29,6 +29,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+
   http: ^0.13.4
   # add this line to your dependencies
   fluttertoast: ^8.0.8
@@ -40,6 +41,8 @@ dependencies:
   flutter_rating_bar: ^4.0.0
   cached_network_image: ^3.1.0+1
   transparent_image: ^2.0.0
+  animated_splash_screen: ^1.1.0
+  lottie:
 
 dev_dependencies:
   flutter_test:
@@ -52,12 +55,14 @@ dev_dependencies:
   # rules and activating additional ones.
   flutter_lints: ^1.0.0
 
+
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
 
 # The following section is specific to Flutter.
 flutter:
-
+  assets:
+    - assets/movie.json
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
   # the material Icons class.
@@ -93,3 +98,10 @@ flutter:
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
+  fonts:
+    - family: Kingthings
+      fonts:
+        - asset: fonts/Kingthings Clarity.ttf
+    - family: GothamBlack
+      fonts:
+        - asset: fonts/gotham-black.otf

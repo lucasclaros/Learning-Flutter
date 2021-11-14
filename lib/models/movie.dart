@@ -3,20 +3,20 @@ class Movie
   int id;
   double average;
   String title;
-  String img;
+  String posterUrl;
   DateTime date;
-  Object genres;
+  List<String> genres;
 
   Movie.fromJson(Map json)
     : id = json['id'],
       title = json['title'],
-      img = json['poster_url'],
+      posterUrl = json['poster_url'],
       average = json['vote_average'],
-      genres = json['genres'],
+      genres = json['genres'].cast<String>(),
       date = DateTime.parse(json['release_date']);
 
   Map toJson()
   {
-    return {'id': id, 'title': title, 'poster_url': img, 'vote_average': average, 'genres': genres, 'release_date': date};
+    return {'id': id, 'title': title, 'poster_url': posterUrl, 'vote_average': average, 'genres': genres, 'release_date': date};
   }
 }
