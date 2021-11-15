@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 
 class MovieView extends StatefulWidget {
-  const MovieView({Key? key}) : super(key: key);
+  final int movieId;
+  const MovieView({Key? key, required this.movieId}) : super(key: key);
 
   @override
   _MovieViewState createState() => _MovieViewState();
@@ -11,9 +12,9 @@ class MovieView extends StatefulWidget {
 class _MovieViewState extends State<MovieView> {
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return Scaffold(
       body: Center(
-        child: CircularProgressIndicator(),
+        child: Text(widget.movieId.toString()),
       ),
     );
   }
