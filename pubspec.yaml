@@ -43,6 +43,8 @@ dependencies:
   transparent_image: ^2.0.0
   animated_splash_screen: ^1.1.0
   lottie:
+  flutter_native_splash: ^1.3.1
+  flutter_localized_locales: ^2.0.3
 
 dev_dependencies:
   flutter_test:
@@ -63,6 +65,7 @@ dev_dependencies:
 flutter:
   assets:
     - assets/movie.json
+    - assets/teste.png
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
   # the material Icons class.
@@ -105,3 +108,10 @@ flutter:
     - family: GothamBlack
       fonts:
         - asset: fonts/gotham-black.otf
+
+flutter_native_splash:
+  color: "#292929"
+  image: assets/teste.png
+  android: true
+  ios: true
+  fullscreen: true

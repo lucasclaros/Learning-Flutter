@@ -4,12 +4,15 @@ import 'package:flutter/material.dart';
 
 class Constants {
   static const String API_ENDPOINT = 'https://desafio-mobile.nyc3.digitaloceanspaces.com/movies';
+  static const String IMDB_APIKEY = 'k_34t7z46e';
+  static const String API_IMDB_POSTERS = 'https://imdb-api.com/en/API/Posters/'+IMDB_APIKEY;
   static const String defaultFont = 'GothamBlack';
-  static const Color rowColor = Color(0xff221234);
-  static const Color backgroundColor = Color(0xff562d82);
-  static const Color titleColor = Color(0xffda4785);
+  static const Color borderRowColor = Color(0xff0e0e0e);
+  static const Color backgroundRowColor = Color(0xff292929);
+  static const Color starListColor = Colors.red;
+  static const Color titleListColor = Colors.amber;
   static const MaterialColor primaryColor = MaterialColor(
-      0xff3A0F68,
+      0xffdd1313,
       <int, Color> {
         50 : Color(0xff3A0F68),
         100: Color(0xff3A0F68),
@@ -24,13 +27,26 @@ class Constants {
       });
 
   static const TextStyle titleFontStyle = TextStyle(
-      color: Constants.titleColor,
+      color: Constants.titleListColor,
       fontSize: 17.0,
       fontStyle: FontStyle.italic
   );
-  static const TextStyle defaultGenreFont = TextStyle(
-      color: Constants.titleColor,
-      fontSize: 17.0,
+  static const TextStyle selectedMovieTitleStyle = TextStyle(
+      color: Constants.titleListColor,
+      fontSize: 20.0,
       fontStyle: FontStyle.italic
+  );
+
+  static const TextStyle genreFontStyle = TextStyle(
+      color: Colors.white,
+      fontSize: 14.0,
+      fontFamily: 'Rimouski',
+      fontStyle: FontStyle.italic
+  );
+
+  static const TextStyle selectedMovieFontStyle = TextStyle(
+    color: Colors.white,
+    fontSize: 17.0,
+    fontFamily: 'Rimouski',
   );
 }
