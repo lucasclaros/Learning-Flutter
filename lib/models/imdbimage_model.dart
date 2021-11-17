@@ -1,8 +1,8 @@
 // To parse this JSON data, do
 //
-//     final movie = movieFromJson(jsonString);
+//     final imdbImage = imdbImageFromJson(jsonString);
 import 'dart:convert';
-ImdbImages movieFromJson(String str) => ImdbImages.fromJson(json.decode(str));
+ImdbImages imdbImageFromJson(String str) => ImdbImages.fromJson(json.decode(str));
 
 class ImdbImages {
   final posters;
@@ -17,7 +17,7 @@ class ImdbImages {
 
   factory ImdbImages.fromJson(Map<String, dynamic> json) => ImdbImages(
     posters: List<Backdrop>.from(json["posters"].map((x) => Backdrop.fromJson(x))),
-    backdrops: List<Backdrop>.from(json["posters"].map((x) => Backdrop.fromJson(x))),
+    backdrops: List<Backdrop>.from(json["backdrops"].map((x) => Backdrop.fromJson(x))),
   );
 }
 
@@ -33,8 +33,8 @@ class Backdrop {
   final height;
 
   factory Backdrop.fromJson(Map<String, dynamic> json) => Backdrop(
-    link: json["link"]!,
-    width: json["width"]!,
-    height: json["height"]!,
+    link: json["link"],
+    width: json["width"],
+    height: json["height"],
   );
 }
